@@ -1,0 +1,18 @@
+name: JSLint
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Install Danger
+        run: yarn add danger danger-plugin-lint-report@1.0.0
+      - name: Run Danger
+        run: yarn danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS }}
