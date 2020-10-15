@@ -19,6 +19,6 @@ jobs:
         run: |
           yarn add danger --dev
           yarn danger init
-          yarn danger ci --dangerfile ..deadpool/.github/workflows/dangerfile.js
+          yarn danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
