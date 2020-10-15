@@ -13,8 +13,9 @@
 
   console.log('test');
   
-  if (){
+  if(){
     // if body
-  }  else {
+  } 
+  else {
     // smth ls
   }
