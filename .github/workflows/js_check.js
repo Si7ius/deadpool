@@ -1,4 +1,4 @@
 import {message, danger} from "danger"
 
-const modifiedMD = danger.git.modified_files.join("MainActivity")
-message("Changed Files in this PR: \n - " + modifiedMD)
+const modified = danger.git.modified_files.join("\n")
+message("Changed Files in this PR: \n - " + modified)
