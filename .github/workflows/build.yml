@@ -16,6 +16,9 @@ jobs:
           node-version: 12.x
 
       - name: Run Danger
-        run: yarn danger ci --dangerfile ..deadpool/.github/workflows/dangerfile.js
+        run: |
+          yarn add danger --dev
+          yarn danger init
+          yarn danger ci --dangerfile ..deadpool/.github/workflows/dangerfile.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
