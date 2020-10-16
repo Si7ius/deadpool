@@ -9,9 +9,9 @@
     q.checked.rows = _.filter(checked.rows(), x => !x.pcode);
     q.checked.size = q.checked.rows.length;
     q.checked.has = q.checked.size > 0;
+  console.log('test');
   }
 
-  console.log('test');
   
   if (){
     // if body
