@@ -14,6 +14,9 @@ jobs:
         run: |
           yarn add danger --dev
           yarn danger init
-          yarn danger --dangerfile "./js_dangerfile.js" ci
+      - name: Lint JS & HTML
+        run: yarn danger --dangerfile "./checkers/js_dangerfile.js" ci
+      - name: PLSQL
+        run: yarn danger --dangerfile "./checkers/plsql_dangerfile.js" ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
