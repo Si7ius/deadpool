@@ -18,7 +18,7 @@ jobs:
         run: yarn danger --dangerfile "./checkers/js_dangerfile.js" ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: PLSQL
+      - name: Lint PLSQL
         run: yarn danger --dangerfile "./checkers/plsql_dangerfile.js" ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
