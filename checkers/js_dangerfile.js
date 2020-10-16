@@ -24,11 +24,7 @@ const diffs = danger.git.created_files
       file,
       diff,
     }))
-  });
-
-const additions = await Promise.all(diffs)
-
-additions
+  })
   .filter(({ diff }) => !!diff)
   .forEach(({ file, diff }) => {
     const matches = findConsole(diff.added)
